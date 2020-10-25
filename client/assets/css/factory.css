@@ -1,4 +1,6 @@
 .catBox {
+    height: auto;
+    min-height: 100%;
     background-color: #e2efff;
     border-radius: 10px;
     padding-top: 50px;

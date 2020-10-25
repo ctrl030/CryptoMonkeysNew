@@ -2,14 +2,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academy kitties </title>
+  <title>Crypto Monkeys </title>
   <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <script src="assets/bootstrap/js/popper.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="assets/css/mystyle.css">
-  <link rel="stylesheet" href="assets/css/cats.css">
+  <link rel="stylesheet" href="assets/css/monkeys.css">
   <link rel="stylesheet" href="assets/css/colors.css">
   <link rel="stylesheet" href="assets/css/factory.css">
   <link rel="stylesheet" href="assets/css/frontend.css">
@@ -17,13 +17,70 @@
   <body>
     <div class="container p-5" style="margin-top: 12vh;margin-bottom: 10vh;">
         <div align="center">
-        <h1 class="c-white">Kitties-Factory</h1>
-        <p class="c-white">Create your custom Kitty</p>
+        <h1 class="c-white">Jungle Island</h1>
+        <p class="c-white">Create your Cryto Monkey</p>
     </div>
         <div class="row">
             <div class="col-lg-4 catBox m-2 light-b-shadow">
-                
+                <div id="monkey">    
+
+                    <div id="mbody">
+                        <div id="mHead">
+    
+                            <div id="mHeadTop"> 
+                                <div id="eyesArea">
+    
+                                    <div class="aroundEyes">
+    
+                                        <div class="eyes" id="leftEye">
+                                            <div class="pupil"></div>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="aroundEyes">
+    
+                                        <div class="eyes" id="rightEye">
+                                            <div class="pupil"></div>
+                                        </div>
+    
+                                    </div>
+    
+                                </div>                       
+                            </div>
+    
+                            <div id="mHeadLower">
+                                <div id="noseArea">                                
+                                    <div id="leftNostril"></div>
+                                    <div id="rightNostril"></div>
+                                </div>
+                                <div id="mouthArea">
+                                    <div id="mouth"></div>
+                                </div>                        
+                            </div>    
+        
+                        </div>
+        
+                        <div id="armsArea">
+                            <div class="arms" id="leftArm">
+                                <div class="hand"></div>
+                            </div>
+                            <div class="arms" id="rightArm">
+                                <div class="hand"></div>
+                            </div>
+                        </div>
+    
+                        <div id="feetArea">
+                            <div class="feet" id="leftFoot"></div>
+                            <div class="feet" id="rightFoot"></div>    
+                        </div>    
+    
+                    </div>
+        
+                </div>
+
                 <br>
+
                 <div class="dnaDiv" id="catDNA">
                     <b>
                         DNA:
@@ -43,14 +100,31 @@
                     </b>
                 </div>
             </div>
+
             <div class="col-lg-7 cattributes m-2 light-b-shadow">
 
-<!-- Cat colors -->
-<div id="catColors">
+            <!-- Cat colors -->
+            <div id="monkeyColors">
                 <div class="form-group">
-                    <label for="formControlRange"><b>Head and body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
+                    <label for="formControlRange"><b>Upper head and feet</b><span class="badge badge-dark ml-2" id="firstGroupColorCode"></span></label>
                     <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
                 </div>
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Around eyes and mouth and body</b><span class="badge badge-dark ml-2" id="secondGroupColorcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="mouthColor">
+                </div>
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Pupils and Arms and nostrils</b><span class="badge badge-dark ml-2" id="thirdGroupColorcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="eyesColor">
+                </div>
+
+                <div class="form-group">
+                    <label for="formControlRange"><b>Lower head</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                </div>
+
             </div>
 
             </div>
@@ -64,7 +138,7 @@
 
     </div>
     <footer align="left">
-        <p>Ivan on Tech Academy Bootcamp July 2020</p>
+        <p>Ivan on Tech Academy Bootcamp 2020</p>
     </footer>
 
   </body>
