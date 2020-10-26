@@ -14,12 +14,10 @@ body {
 
 #mbody {
     position: relative;
-    background-color: #2e0505;
     height: 300px;
     width: 240px;
     border-radius: 50% 50% 20% 20%;
-    position: absolute;
-    
+    position: absolute;    
 }
 
 #mHead{
@@ -28,12 +26,38 @@ body {
     left: 50%;
     transform: translateX(-50%);
     height: 260px;
+    z-index: 4;
 }
+
+#earsArea{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+       
+}
+
+.ears {
+    position: absolute;    
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 55px;        
+}
+
+#ear-left {
+    position: absolute; 
+    left: -84px;    
+  }
+  
+  #ear-right {
+    position: absolute;    
+    left: 40px;    
+  }
+
 
 
 #mHeadTop{
-    position: absolute;
-    background-color: #6d0b0b;
+    position: absolute;    
     height: 160px;
     width: 125px;
     border-radius: 50% 50% 20% 20%;
@@ -71,8 +95,7 @@ body {
 }
 
 .pupil {
-    position: absolute;
-    background-color: black;    
+    position: absolute;        
     height: 15px;
     width: 12px;
     border-radius: 50%;
@@ -82,14 +105,14 @@ body {
 }
 
 #mHeadLower {
-    position: relative;
-    background-color: brown;
+    position: relative;    
     height: 100px;
     width: 175px;
     border-radius: 50%;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 5;
 }
 
 #noseArea {
@@ -103,8 +126,7 @@ body {
 }
 
 #leftNostril{
-    position: absolute;
-    background-color: rgb(78, 39, 11);    
+    position: absolute;        
     height: 10px;
     width: 16px;
     border-radius: 80% 5% 100% 0%;
@@ -113,16 +135,14 @@ body {
 }
 
 #rightNostril{
-    position: absolute;
-    background-color:  rgb(78, 39, 11);    
+    position: absolute;        
     height: 10px;
     width: 16px;
     border-radius: 5% 80% 0% 100%;    
     left: 80%;    
 }
 
-#mouthArea {
-    background-color: rgb(199, 130, 71);
+#mouthArea {    
     height: 50px;
     width: 130px;
     position: absolute;
@@ -143,8 +163,7 @@ body {
 }
 
 .arms {
-    position: relative;
-    background-color: saddlebrown;
+    position: relative;    
     height: 260px;
     width: 60px;
     border-radius: 20% 20% 20% 20%;
@@ -171,8 +190,7 @@ body {
 }
 
 .feet{
-    position: absolute;
-    background-color: darkred;    
+    position: absolute;      
     height: 40px;
     width: 70px;
     border-radius: 50%;

@@ -15,29 +15,29 @@ function genColors(){
 }
 
 //This function code needs to modified so that it works with Your cat code.
-function headColor(color,code) {
+function firstGroupColor(color,code) {
     $('#mHeadTop, .feet').css('background', '#' + color)  //This changes the color of the cat
-    $('#firstGroupColorcode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#firstGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
     $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
 
 function secondGroupColor(color,code) {
     $('#eyesArea, #mouthArea, #mbody').css('background', '#' + color)  //This changes the color of the cat
-    $('#secondGroupColorcode').html('code: '+code) //This updates text of the badge next to the slider
-    $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
+    $('#secondGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnamouth').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
 function thirdGroupColor(color,code) {
     $('.pupil, .arms, #leftNostril, #rightNostril').css('background', '#' + color)  //This changes the color of the cat
-    $('#thirdGroupColorcode').html('code: '+code) //This updates text of the badge next to the slider
-    $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
+    $('#thirdGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnaeyes').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
 function fourthGroupColor(color,code) {
-    $('#mHeadTop, .feet').css('background', '#' + color)  //This changes the color of the cat
-    $('#fourthGroupColorcode').html('code: '+code) //This updates text of the badge next to the slider
-    $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
+    $('#mHeadLower, .ears').css('background', '#' + color)  //This changes the color of the cat
+    $('#fourthGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnaears').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
 

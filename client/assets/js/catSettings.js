@@ -2,18 +2,19 @@
 var colors = Object.values(allColors())
 
 var defaultDNA = {
-    "headcolor" : 10,
-    "mouthcolor" : 10,
-    "eyescolor" : 10,
-    "earscolor" : 10,
-    //Cattributes
-    "eyesShape" : 1,
-    "decorationPattern" : 1,
-    "decorationMidcolor" : 13,
-    "decorationSidescolor" : 13,
-    "animation" :  1,
-    "lastNum" :  1
-    }
+  "headcolor" : 12,
+  "mouthcolor" : 14,
+  "eyescolor" : 13,
+  "earscolor" : 11,
+  
+  //Cattributes
+  "eyesShape" : 1,
+  "decorationPattern" : 1,
+  "decorationMidcolor" : 13,
+  "decorationSidescolor" : 13,
+  "animation" :  1,
+  "lastNum" :  1
+}
 
 // when page load
 $( document ).ready(function() {
@@ -22,12 +23,12 @@ $( document ).ready(function() {
   $('#dnaeyes').html(defaultDNA.eyesColor);
   $('#dnaears').html(defaultDNA.earsColor);
     
-//   $('#dnashape').html(defaultDNA.eyesShape)
-//   $('#dnadecoration').html(defaultDNA.decorationPattern)
-//   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
-//   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
-//   $('#dnaanimation').html(defaultDNA.animation)
-//   $('#dnaspecial').html(defaultDNA.lastNum)
+  //   $('#dnashape').html(defaultDNA.eyesShape)
+  //   $('#dnadecoration').html(defaultDNA.decorationPattern)
+  //   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
+  //   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
+  //   $('#dnaanimation').html(defaultDNA.animation)
+  //   $('#dnaspecial').html(defaultDNA.lastNum)
 
   renderCat(defaultDNA)
 });
@@ -49,34 +50,37 @@ function getDna(){
 }
 
 function renderCat(dna){
-    headColor(colors[dna.headcolor],dna.headcolor)
-    $('#bodycolor').val(dna.headcolor)
-    $('#mouthColor').val(dna.mouthcolor)
-    $('#eyesColor').val(dna.eyescolor)
-    $('#bodycolor').val(dna.bodycolor)
+    firstGroupColor(colors[dna.headcolor],dna.headcolor)
+    secondGroupColor(colors[dna.mouthcolor],dna.mouthcolor)
+    thirdGroupColor(colors[dna.eyescolor],dna.eyescolor)
+    fourthGroupColor(colors[dna.earscolor],dna.earscolor)
+    $('#headColorSlider').val(dna.headcolor)
+    $('#mouthColorSlider').val(dna.mouthcolor)
+    $('#eyesColorSlider').val(dna.eyescolor)
+    $('#earsColorSlider').val(dna.earscolor)
 
 }
 
-// Changing cat colors
-$('#bodycolor').change(()=>{
-    var colorVal = $('#bodycolor').val()
-    headColor(colors[colorVal],colorVal)
+// Changing monkey colors
+$('#headColorSlider').change(()=>{
+    var colorVal = $('#headColorSlider').val()
+    firstGroupColor(colors[colorVal],colorVal)
 })
 
-$('#mouthcolor').change(()=>{
-  var colorVal = $('mouthcolor').val()
+$('#mouthColorSlider').change(()=>{
+  var colorVal = $('#mouthColorSlider').val()
   secondGroupColor(colors[colorVal],colorVal)
 })
 
 
-$('#eyescolor').change(()=>{
-  var colorVal = $('#eyescolor').val()
+$('#eyesColorSlider').change(()=>{
+  var colorVal = $('#eyesColorSlider').val()
   thirdGroupColor(colors[colorVal],colorVal)
 })
 
 
-$('#bodycolor').change(()=>{
-  var colorVal = $('#bodycolor').val()
+$('#earsColorSlider').change(()=>{
+  var colorVal = $('#earsColorSlider').val()
   fourthGroupColor(colors[colorVal],colorVal)
 })
 
