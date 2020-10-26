@@ -23,12 +23,12 @@ $( document ).ready(function() {
   $('#dnaeyes').html(defaultDNA.eyesColor);
   $('#dnaears').html(defaultDNA.earsColor);
     
-  //   $('#dnashape').html(defaultDNA.eyesShape)
-  //   $('#dnadecoration').html(defaultDNA.decorationPattern)
-  //   $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
-  //   $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
-  //   $('#dnaanimation').html(defaultDNA.animation)
-  //   $('#dnaspecial').html(defaultDNA.lastNum)
+  $('#dnashape').html(defaultDNA.eyesShape)
+  $('#dnadecoration').html(defaultDNA.decorationPattern)
+  $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
+  $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
+  $('#dnaanimation').html(defaultDNA.animation)
+  $('#dnaspecial').html(defaultDNA.lastNum)
 
   renderCat(defaultDNA)
 });
@@ -50,14 +50,22 @@ function getDna(){
 }
 
 function renderCat(dna){
-    firstGroupColor(colors[dna.headcolor],dna.headcolor)
-    secondGroupColor(colors[dna.mouthcolor],dna.mouthcolor)
-    thirdGroupColor(colors[dna.eyescolor],dna.eyescolor)
-    fourthGroupColor(colors[dna.earscolor],dna.earscolor)
-    $('#headColorSlider').val(dna.headcolor)
-    $('#mouthColorSlider').val(dna.mouthcolor)
-    $('#eyesColorSlider').val(dna.eyescolor)
-    $('#earsColorSlider').val(dna.earscolor)
+  firstGroupColor(colors[dna.headcolor],dna.headcolor)
+  $('#headColorSlider').val(dna.headcolor)
+
+  secondGroupColor(colors[dna.mouthcolor],dna.mouthcolor)
+  $('#mouthColorSlider').val(dna.mouthcolor)
+
+  thirdGroupColor(colors[dna.eyescolor],dna.eyescolor)
+  $('#eyesColorSlider').val(dna.eyescolor)
+
+  fourthGroupColor(colors[dna.earscolor],dna.earscolor)
+  $('#earsColorSlider').val(dna.earscolor)
+   
+
+    
+    
+   
 
 }
 

@@ -8,8 +8,13 @@ html {
     overflow-y: scroll;
 }
 body {
-    background: #607d8b;
+    background: #ede15f;
  
+}
+
+.textOverBoxes {
+    color: #4f3222 !important;
+    font-weight: bold;
 }
 
 #mbody {
