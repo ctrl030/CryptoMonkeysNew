@@ -51,6 +51,9 @@ function getDna(){
 function renderCat(dna){
     headColor(colors[dna.headcolor],dna.headcolor)
     $('#bodycolor').val(dna.headcolor)
+    $('#mouthColor').val(dna.headcolor)
+    $('#eyesColor').val(dna.headcolor)
+    $('#bodycolor').val(dna.headcolor)
 
 }
 
