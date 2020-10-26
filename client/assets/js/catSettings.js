@@ -63,14 +63,14 @@ $('#bodycolor').change(()=>{
     headColor(colors[colorVal],colorVal)
 })
 
-$('#mouthColor').change(()=>{
-  var colorVal = $('mouthColor').val()
+$('#mouthcolor').change(()=>{
+  var colorVal = $('mouthcolor').val()
   secondGroupColor(colors[colorVal],colorVal)
 })
 
 
-$('#eyesColor').change(()=>{
-  var colorVal = $('#eyesColor').val()
+$('#eyescolor').change(()=>{
+  var colorVal = $('#eyescolor').val()
   thirdGroupColor(colors[colorVal],colorVal)
 })
 
