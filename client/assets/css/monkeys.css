@@ -51,14 +51,12 @@ body {
 #ear-left {
     position: absolute; 
     left: -84px;    
-  }
-  
-  #ear-right {
+}
+
+#ear-right {
     position: absolute;    
     left: 40px;    
-  }
-
-
+}
 
 #mHeadTop{
     position: absolute;    
@@ -170,8 +168,7 @@ body {
     position: relative;    
     height: 260px;
     width: 60px;
-    border-radius: 20% 20% 20% 20%;
-    
+    border-radius: 20% 20% 20% 20%;    
 }
 
 #leftArm {

@@ -97,7 +97,7 @@ var colors = {00: "ae494f",
 95: "43474b",
 96: "262d2b",
 97: "ddd67e",
-98: "344867"}
+98: "ffffff"}
 
 function allColors(){
 

@@ -9,9 +9,9 @@ var defaultDNA = {
   
   //Cattributes
   "eyesShape" : 1,
-  "decorationPattern" : 1,
-  "decorationMidcolor" : 13,
-  "decorationSidescolor" : 13,
+  "mouthShape" : 1,
+  "eyeBackgroundColor" : 98,
+  "lowerHeadColor" : 11,
   "animation" :  1,
   "lastNum" :  1
 }
@@ -23,14 +23,14 @@ $( document ).ready(function() {
   $('#dnaeyes').html(defaultDNA.eyesColor);
   $('#dnaears').html(defaultDNA.earsColor);
     
-  $('#dnashape').html(defaultDNA.eyesShape)
-  $('#dnadecoration').html(defaultDNA.decorationPattern)
-  $('#dnadecorationMid').html(defaultDNA.decorationMidcolor)
-  $('#dnadecorationSides').html(defaultDNA.decorationSidescolor)
+  $('#dnaEyeShape').html(defaultDNA.eyesShape)
+  $('#dnaMouthShape').html(defaultDNA.mouthShape)
+  $('#dnaEyeBackgroundColor').html(defaultDNA.eyeBackgroundColor)
+  $('#dnaLowerHeadColor').html(defaultDNA.lowerHeadColor)
   $('#dnaanimation').html(defaultDNA.animation)
   $('#dnaspecial').html(defaultDNA.lastNum)
 
-  renderCat(defaultDNA)
+  renderMonkey(defaultDNA)
 });
 
 function getDna(){
@@ -39,17 +39,17 @@ function getDna(){
     dna += $('#dnamouth').html()
     dna += $('#dnaeyes').html()
     dna += $('#dnaears').html()
-    dna += $('#dnashape').html()
-    dna += $('#dnadecoration').html()
-    dna += $('#dnadecorationMid').html()
-    dna += $('#dnadecorationSides').html()
+    dna += $('#dnaEyeShape').html()
+    dna += $('#dnaMouthShape').html()
+    dna += $('#dnaEyeBackgroundColor').html()
+    dna += $('#dnaLowerHeadColor').html()
     dna += $('#dnaanimation').html()
     dna += $('#dnaspecial').html()
 
     return parseInt(dna)
 }
 
-function renderCat(dna){
+function renderMonkey(dna){
   firstGroupColor(colors[dna.headcolor],dna.headcolor)
   $('#headColorSlider').val(dna.headcolor)
 
@@ -62,10 +62,17 @@ function renderCat(dna){
   fourthGroupColor(colors[dna.earscolor],dna.earscolor)
   $('#earsColorSlider').val(dna.earscolor)
    
+  eyeVariation(defaultDNA.eyesShape)
+  $('#dnaEyeShapeSlider').val(defaultDNA.eyesShape)  
 
+  mouthVariation(defaultDNA.eyesShape)
+  $('#dnaMouthShapeSlider').val(defaultDNA.mouthShape)  
     
-    
-   
+  dnaEyeBackgroundColor(colors[dna.eyeBackgroundColor],dna.eyeBackgroundColor)
+  $('#eyeBackgroundColorSlider').val(dna.eyeBackgroundColor)
+
+  dnaLowerHeadColor(colors[dna.lowerHeadColor],dna.lowerHeadColor)
+  $('#lowerHeadColorSlider').val(dna.lowerHeadColor)
 
 }
 
@@ -80,21 +87,36 @@ $('#mouthColorSlider').change(()=>{
   secondGroupColor(colors[colorVal],colorVal)
 })
 
-
 $('#eyesColorSlider').change(()=>{
   var colorVal = $('#eyesColorSlider').val()
   thirdGroupColor(colors[colorVal],colorVal)
 })
-
 
 $('#earsColorSlider').change(()=>{
   var colorVal = $('#earsColorSlider').val()
   fourthGroupColor(colors[colorVal],colorVal)
 })
 
-
 $('#dnaEyeShapeSlider').change(()=>{
-  var shape = parseInt($('#dnaEyeShapeSlider').val()) 
-  eyeVariation(shape)
+  var eyeShape = parseInt($('#dnaEyeShapeSlider').val()) 
+  eyeVariation(eyeShape)
 })
+
+
+$('#dnaMouthShapeSlider').change(()=>{
+  var mouthShape = parseInt($('#dnaMouthShapeSlider').val()) 
+  mouthVariation(mouthShape)
+})
+
+
+$('#eyeBackgroundColorSlider').change(()=>{
+  var colorVal = $('#eyeBackgroundColorSlider').val()
+  dnaEyeBackgroundColor(colors[colorVal],colorVal)
+})
+
+$('#lowerHeadColorSlider').change(()=>{
+  var colorVal = $('#lowerHeadColorSlider').val()
+  dnaLowerHeadColor(colors[colorVal],colorVal)
+})
+
 

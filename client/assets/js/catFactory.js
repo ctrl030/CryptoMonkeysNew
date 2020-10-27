@@ -34,9 +34,21 @@ function thirdGroupColor(color,code) {
 }
 
 function fourthGroupColor(color,code) {
-    $('#mHeadLower, .ears').css('background', '#' + color)  //This changes the color of the cat
+    $('.ears').css('background', '#' + color)  //This changes the color of the cat
     $('#fourthGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
     $('#dnaears').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
+function dnaEyeBackgroundColor(color,code) {
+    $('.eyes').css('background', '#' + color)  //This changes the color of the cat
+    $('#eyeBackgroundColorCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnaEyeBackgroundColor').html(code) //This updates the body color part of the DNA that is displayed below the cat
+}
+
+function dnaLowerHeadColor(color,code) {
+    $('#mHeadLower').css('background', '#' + color)  //This changes the color of the cat
+    $('#lowerHeadColorCode').html('code: '+code) //This updates text of the badge next to the slider
+    $('#dnaLowerHeadColor').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
 
@@ -47,7 +59,7 @@ function fourthGroupColor(color,code) {
 //###################################################
 function eyeVariation(num) {
 
-    $('#dnashape').html(num)
+    $('#dnaEyeShape').html(num)
     switch (num) {
         case 1:
             normalEyes()
@@ -85,15 +97,96 @@ function eyeVariation(num) {
     }
 }
 
-function decorationVariation(num) {
-    $('#dnadecoration').html(num)
+function mouthVariation(num) {
+
+    $('#dnaMouthShape').html(num)
     switch (num) {
         case 1:
-            $('#decorationName').html('Basic')
-            normaldecoration()
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Basic')
+            break
+        case 2:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Skinny Mouth')
+            mouthType2();
+            break           
+        case 3:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Lambo')
+            mouthType3();
+            break
+        case 4:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Bullish')
+            mouthType4();
+            break
+        case 5:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Flash Crash')
+            mouthType5();
+            break
+        case 6:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('Hyper')
+            mouthType6();
+            break
+        case 7:
+            normalMouth()
+            $('#dnaMouthShapeCode').html('RARE')            
             break
     }
 }
+
+function normalMouth() {
+    $('#mouthArea').css('height', '50px')
+    $('#mouthArea').css('width', '130px')
+    $('#mouthArea').css('top', '36px')
+    $('#mouthArea').css('border-radius', '20% 20% 50% 50%')
+
+    $('#armsArea').css('top', '62px')
+    
+    $('#leftArm').css('transform', 'rotate(-9deg)')
+    $('#leftArm').css('right', '16px')
+    
+    $('#rightArm').css('transform', 'rotate(9deg)')
+    $('#rightArm').css('left', '16px')
+ 
+}
+
+function mouthType2() {
+    $('#mouthArea').css('top', '56px')    
+    $('#mouthArea').css('height', '20px')    
+    
+}
+
+function mouthType3() {    
+    $('#mouthArea').css('height', '65px')
+    $('#mouthArea').css('top', '32px')
+}
+
+function mouthType4() {    
+    $('#mouthArea').css('width', '90px')    
+   
+}
+
+function mouthType5() {
+    $('#mouthArea').css('height', '44px')    
+    $('#mouthArea').css('border-radius', '10% 10% 10% 10%') 
+}
+
+function mouthType6() {    
+    $('#mouthArea').css('height', '64px')
+    $('#mouthArea').css('width', '156px')
+    $('#mouthArea').css('top', '28px') 
+
+    $('#armsArea').css('top', '-160px')
+    $('#leftArm').css('transform', 'rotate(-20deg)')
+    $('#leftArm').css('right', '110px')
+    $('#rightArm').css('transform', 'rotate(20deg)')
+    $('#rightArm').css('left', '110px')
+}
+
+
 
 function normalEyes() {
     $('.eyes').css('width', '40px')
@@ -133,10 +226,3 @@ function eyesType6() {
 
 
 
-async function normaldecoration() {
-    //Remove all style from other decorations
-    //In this way we can also use normalDecoration() to reset the decoration style
-    $('.cat__head-dots').css({ "transform": "rotate(0deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
-    $('.cat__head-dots_first').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
-    $('.cat__head-dots_second').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
-}
