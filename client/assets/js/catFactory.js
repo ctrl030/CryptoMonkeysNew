@@ -21,7 +21,6 @@ function firstGroupColor(color,code) {
     $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
 }
 
-
 function secondGroupColor(color,code) {
     $('#eyesArea, #mouthArea, #mbody').css('background', '#' + color)  //This changes the color of the cat
     $('#secondGroupColorCode').html('code: '+code) //This updates text of the badge next to the slider
@@ -52,7 +51,36 @@ function eyeVariation(num) {
     switch (num) {
         case 1:
             normalEyes()
-            $('#eyeName').html('Basic')
+            $('#dnaEyeShapeCode').html('Basic')
+            break
+        case 2:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('Down')
+            eyesType2();
+            break           
+        case 3:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('Up')
+            eyesType3();
+            break
+        case 4:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('Flat pupils')
+            eyesType4();
+            break
+        case 5:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('Skinny pupils')
+            eyesType5();
+            break
+        case 6:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('Hyper')
+            eyesType6();
+            break
+        case 7:
+            normalEyes()
+            $('#dnaEyeShapeCode').html('RARE')            
             break
     }
 }
@@ -67,9 +95,43 @@ function decorationVariation(num) {
     }
 }
 
-async function normalEyes() {
-    await $('.cat__eye').find('span').css('border', 'none')
+function normalEyes() {
+    $('.eyes').css('width', '40px')
+    $('.eyes').css('top', '10px')
+    $('.pupil').css('width', '12px')
+    $('.pupil').css('height', '15px')
+    $('.pupil').css('top', '24px')    
+    console.log("normalEyes")
 }
+
+function eyesType2() {    
+    $('.eyes').css('top', '15px')    
+    console.log("eyesType2")
+}
+
+function eyesType3() {    
+    $('.eyes').css('top', '5px')    
+    console.log("eyesType3")
+}
+
+function eyesType4() {
+    $('.pupil').css('width', '32px')
+    console.log("eyesType4")
+}
+
+function eyesType5() {
+    $('.pupil').css('height', '32px')
+    console.log("eyesType5")
+}
+
+function eyesType6() {
+    $('.pupil').css('top', '10px')
+    $('.pupil').css('width', '42px')
+    $('.pupil').css('height', '42px')
+    console.log("eyesType6")
+}
+
+
 
 async function normaldecoration() {
     //Remove all style from other decorations

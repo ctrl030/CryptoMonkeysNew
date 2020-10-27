@@ -93,3 +93,8 @@ $('#earsColorSlider').change(()=>{
 })
 
 
+$('#dnaEyeShapeSlider').change(()=>{
+  var shape = parseInt($('#dnaEyeShapeSlider').val()) 
+  eyeVariation(shape)
+})
+
