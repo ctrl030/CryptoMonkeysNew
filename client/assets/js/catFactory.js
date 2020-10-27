@@ -143,20 +143,16 @@ function normalMouth() {
     $('#mouthArea').css('top', '36px')
     $('#mouthArea').css('border-radius', '20% 20% 50% 50%')
 
-    $('#armsArea').css('top', '62px')
-    
+    $('#armsArea').css('top', '62px')    
     $('#leftArm').css('transform', 'rotate(-9deg)')
-    $('#leftArm').css('right', '16px')
-    
+    $('#leftArm').css('right', '16px')    
     $('#rightArm').css('transform', 'rotate(9deg)')
-    $('#rightArm').css('left', '16px')
- 
+    $('#rightArm').css('left', '16px') 
 }
 
 function mouthType2() {
     $('#mouthArea').css('top', '56px')    
-    $('#mouthArea').css('height', '20px')    
-    
+    $('#mouthArea').css('height', '20px') 
 }
 
 function mouthType3() {    
@@ -165,8 +161,7 @@ function mouthType3() {
 }
 
 function mouthType4() {    
-    $('#mouthArea').css('width', '90px')    
-   
+    $('#mouthArea').css('width', '90px')      
 }
 
 function mouthType5() {
@@ -185,8 +180,6 @@ function mouthType6() {
     $('#rightArm').css('transform', 'rotate(20deg)')
     $('#rightArm').css('left', '110px')
 }
-
-
 
 function normalEyes() {
     $('.eyes').css('width', '40px')
@@ -223,6 +216,3 @@ function eyesType6() {
     $('.pupil').css('height', '42px')
     console.log("eyesType6")
 }
-
-
-
