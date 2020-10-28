@@ -1,22 +1,70 @@
-.monkeyBox {
-    height: 580px;
-    width: 320px, !important;     
-    background-color: #93fc7c;
-    border-radius: 10px;
-    padding-top: 190px;
-    padding-left: 60px;
-    padding-bottom: 100px;
+#jungleIslandTextArea {
+  margin-top: 2vh;
+  margin-bottom: 6vh;
 }
 
-.cattributes {
-    padding: 25px;
-    background-color: #ededed;
-    border-radius: 10px;
+#jungleIslandTextDiv {
+  padding: 25px;
+  background-color: #ededed;
+  border-radius: 10px;
+}
+
+#monkeyRow {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  justify-content: space-around;
+}
+
+.monkeyBox {
+  position: relative;
+  height: 580px;
+  width: 400px !important;
+  /*background-color: #93fc7c;*/
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/28/18/37/the-1865639_960_720.jpg");
+  border-radius: 10px;
+}
+
+.monkeyAttributes {
+  padding: 25px;
+  background-color: #ededed;
+  border-radius: 10px;
 }
 
 .dnaDiv {
-    position: absolute;
-    left:20px;
-    bottom: 5px;
+  position: absolute;
+  width: 240px !important;
+  height: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 80px;
+  bottom: 15px;
+  background-color: #ededed;
+  border-radius: 10px;
+}
 
+#buttonHolderArea {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ededed;
+  display: flex;
+}
+
+#buttonHolderDiv {
+  width: 1000px;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#jungleIslandFooter {
+  border-radius: 10px;
+  background-color: #ededed;
+  text-align: center;
+}
+
+#jungleIslandFooter p {
+  font-size: 16px;
+  font-weight: bold;
 }
