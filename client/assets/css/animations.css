@@ -47,11 +47,11 @@
 }
 */
 
-.bigHeadClass {
-  animation: bigHead 10s infinite;
+.growingAndShrinkingClass {
+  animation: growingAndShrinking 10s infinite;
 }
 
-@keyframes bigHead {
+@keyframes growingAndShrinking {
   0% {
     transform: translateX(-50%) scale(1);
   }
@@ -63,4 +63,118 @@
   100% {
     transform: translateX(-50%) scale(1);
   }
+}
+
+.jumpingClass {
+  animation: jumping 1s infinite;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.wigglingClass {
+  animation: wiggling 3s infinite;
+}
+
+@keyframes wiggling {
+  0% {
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  30% {
+    transform: translateX(-50%) rotate(12deg);
+  }
+
+  60% {
+    transform: translateX(-50%) rotate(-12deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
+.fadingClass {
+  animation: fading 3s infinite;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.over9000Class {
+  background: #f7931b !important;
+}
+
+.liftingLeftArmClass {
+  animation: liftingLeftArm 3s infinite;
+}
+
+@keyframes liftingLeftArm {
+  0% {
+    transform: rotate(-9deg);
+    transform-origin: center top;
+  }
+
+  50% {
+    transform: rotate(150deg);
+    transform-origin: center top;
+  }
+
+  100% {
+    transform: rotate(-9deg);
+    transform-origin: center top;
+  }
+}
+
+.liftingRightArmClass {
+  animation: liftingRightArm 3s infinite;
+}
+
+@keyframes liftingRightArm {
+  0% {
+    transform: rotate(9deg);
+    transform-origin: center top;
+  }
+
+  50% {
+    transform: rotate(-150deg);
+    transform-origin: center top;
+  }
+
+  100% {
+    transform: rotate(9deg);
+    transform-origin: center top;
+  }
+}
+
+.leftArmUpClass {
+  transform: rotate(150deg) !important;
+  transform-origin: center top !important;
+}
+
+.rightArmUpClass {
+  transform: rotate(-150deg) !important;
+  transform-origin: center top !important;
 }

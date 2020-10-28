@@ -85,7 +85,7 @@ function eyeVariation(num) {
             break
         case 6:
             normalEyes()
-            $('#dnaEyeShapeCode').html('Hyper')
+            $('#dnaEyeShapeCode').html('ITS OVER 9000')
             eyesType6();
             break
         case 7:
@@ -101,7 +101,8 @@ function normalEyes() {
     $('.eyes').css('top', '10px')
     $('.pupil').css('width', '12px')
     $('.pupil').css('height', '15px')
-    $('.pupil').css('top', '24px')    
+    $('.pupil').css('top', '24px')
+    $('.pupil').removeClass("over9000Class")       
     console.log("normalEyes")
 }
 
@@ -129,7 +130,11 @@ function eyesType6() {
     $('.pupil').css('top', '10px')
     $('.pupil').css('width', '42px')
     $('.pupil').css('height', '42px')
-    console.log("eyesType6")
+    
+    $('.pupil').addClass("over9000Class")
+
+    console.log("ITS OVER 9000")
+    console.log($('.pupil').css)
 }
 
 function eyesType7() {
@@ -171,7 +176,7 @@ function mouthVariation(num) {
             break
         case 6:
             normalMouth()
-            $('#dnaMouthShapeCode').html('Hyper')
+            $('#dnaMouthShapeCode').html('ITS OVER 9000')
             mouthType6();
             break
         case 7:
@@ -189,12 +194,15 @@ function normalMouth() {
     $('#mouthArea').css('width', '130px')
     $('#mouthArea').css('top', '36px')
     $('#mouthArea').css('border-radius', '20% 20% 50% 50%')
+    $('#leftArm').removeClass("leftArmUpClass")
+    $('#rightArm').removeClass("rightArmUpClass")
 
-    $('#armsArea').css('top', '62px')    
+
+  /*  $('#armsArea').css('top', '62px')    
     $('#leftArm').css('transform', 'rotate(-9deg)')
     $('#leftArm').css('right', '16px')    
     $('#rightArm').css('transform', 'rotate(9deg)')
-    $('#rightArm').css('left', '16px') 
+    $('#rightArm').css('left', '16px') */
 }
 
 function mouthType2() {
@@ -219,13 +227,17 @@ function mouthType5() {
 function mouthType6() {    
     $('#mouthArea').css('height', '64px')
     $('#mouthArea').css('width', '156px')
-    $('#mouthArea').css('top', '28px') 
+    $('#mouthArea').css('top', '28px')   
+    $('#leftArm').addClass("leftArmUpClass")
+    $('#rightArm').addClass("rightArmUpClass")
 
-    $('#armsArea').css('top', '-160px')
+    /*
+     $('#armsArea').css('top', '-160px')
     $('#leftArm').css('transform', 'rotate(-20deg)')
     $('#leftArm').css('right', '110px')
     $('#rightArm').css('transform', 'rotate(20deg)')
     $('#rightArm').css('left', '110px')
+    */
 }
 
 function mouthType7() {    
@@ -246,27 +258,27 @@ function animationForMonkey(num) {
             break
         case 2:
             withoutAnimation()
-            $('#dnaAnimationCode').html('animationType2')
+            $('#dnaAnimationCode').html('Wiggle ')
             animationType2();
             break           
         case 3:
             withoutAnimation()
-            $('#dnaAnimationCode').html('animationType3')
+            $('#dnaAnimationCode').html('Big Head')
             animationType3();
             break
         case 4:
             withoutAnimation()
-            $('#dnaAnimationCode').html('animationType4')
+            $('#dnaAnimationCode').html('Bullrun')
             animationType4();
             break
         case 5:
             withoutAnimation()
-            $('#dnaAnimationCode').html('animationType5')
+            $('#dnaAnimationCode').html('Ghost')
             animationType5();
             break
         case 6:
             withoutAnimation()
-            $('#dnaAnimationCode').html('Hyper')
+            $('#dnaAnimationCode').html('ITS OVER 9000')
             animationType6();
             break
         case 7:
@@ -281,33 +293,46 @@ function animationForMonkey(num) {
 
 function withoutAnimation() {
     // Reset Big Head while keeping centered: $('#mHead').css('transform ', 'translateX(-50%)')
-    console.log("animationType1") 
+    $('#monkey').removeClass("jumpingClass");
+    $('#monkey').removeClass("fadingClass");
+    $('#mHead').removeClass("wigglingClass"); 
+    $('#mHead').removeClass("growingAndShrinkingClass");
+    $('#mHeadTop').removeClass("growingAndShrinkingClass");
+    $('.pupil').removeClass("growingAndShrinkingClass");
+    $('#leftArm').removeClass("liftingLeftArmClass");
+    $('#rightArm').removeClass("liftingRightArmClass");
+
+    console.log("clearing")    
 }
 
 function animationType2() {
-    $('#mHead').addClass("bigHeadClass");
-    console.log("animationType2") 
+    $('#mHead').addClass("wigglingClass"); 
 }
 
 function animationType3() {    
-    
+    $('#mHead').addClass("growingAndShrinkingClass");
 }
 
-function animationType4() {    
-    
+function animationType4() {
+    $('#monkey').addClass("jumpingClass");    
 }
 
 function animationType5() {
+    $('#monkey').addClass("fadingClass");     
+}
+
+function animationType6() {     
+    $('#mHead').addClass("growingAndShrinkingClass");
+    $('#mHeadTop').addClass("growingAndShrinkingClass");
+    $('#monkey').addClass("jumpingClass");
+    $('.pupil').addClass("growingAndShrinkingClass");
+    $('#leftArm').addClass("liftingLeftArmClass");
+    $('#rightArm').addClass("liftingRightArmClass");    
     
 }
 
-function animationType6() {    
-
-    //Big Head while keeping centered: transform: translateX(-50%) scale(1.5);
-
-    
-}
-
-function animationType7() {    
+function animationType7() {   
+    $('#leftArm').addClass("liftingLeftArmClass");
+    $('#rightArm').addClass("liftingRightArmClass");    
    
 }
