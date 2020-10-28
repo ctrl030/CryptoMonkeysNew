@@ -6,14 +6,59 @@ var defaultDNA = {
   eyescolor: 13,
   earscolor: 11,
 
-  //Cattributes
+  //Monkey attributes
   eyesShape: 1,
   mouthShape: 1,
   eyeBackgroundColor: 98,
-  lowerHeadColor: 11,
+  lowerHeadColor: 92,
   animation: 1,
   lastNum: 1,
 };
+
+var itsOver9000DNA = {
+  headcolor: 12,
+  mouthcolor: 14,
+  eyescolor: 13,
+  earscolor: 11,
+
+  eyesShape: 7,
+  mouthShape: 7,
+  eyeBackgroundColor: 98,
+  lowerHeadColor: 92,
+  animation: 7,
+  lastNum: 1,
+};
+
+function createRandomMonkey() {
+  /*
+  function getRandomNumberBetweenMinAndMax(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }*/
+
+  var randomHeadcolor = Math.floor(Math.random() * 88) + 10;
+
+  console.log(randomHeadcolor);
+
+  var randomDNA = {
+    headcolor: randomHeadcolor,
+    mouthcolor: 14,
+    eyescolor: 13,
+    earscolor: 11,
+
+    eyesShape: 7,
+    mouthShape: 7,
+    eyeBackgroundColor: 98,
+    lowerHeadColor: 92,
+    animation: 7,
+    lastNum: 1,
+  };
+
+  // create random DNA variable, create keys and calculate values and assign values to keys
+  // then run renderMonkey(randomDNA);
+  renderMonkey(randomDNA);
+}
 
 // when page load
 $(document).ready(function () {
@@ -61,10 +106,10 @@ function renderMonkey(dna) {
   fourthGroupColor(colors[dna.earscolor], dna.earscolor);
   $("#earsColorSlider").val(dna.earscolor);
 
-  eyeVariation(defaultDNA.eyesShape);
+  eyeVariation(dna.eyesShape);
   $("#dnaEyeShapeSlider").val(dna.eyesShape);
 
-  mouthVariation(defaultDNA.eyesShape);
+  mouthVariation(dna.eyesShape);
   $("#dnaMouthShapeSlider").val(dna.mouthShape);
 
   dnaEyeBackgroundColor(colors[dna.eyeBackgroundColor], dna.eyeBackgroundColor);
@@ -73,7 +118,7 @@ function renderMonkey(dna) {
   dnaLowerHeadColor(colors[dna.lowerHeadColor], dna.lowerHeadColor);
   $("#lowerHeadColorSlider").val(dna.lowerHeadColor);
 
-  animationForMonkey(defaultDNA.animation);
+  animationForMonkey(dna.animation);
   $("#dnaAnimationSlider").val(dna.animation);
 }
 

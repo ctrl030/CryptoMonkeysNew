@@ -83,12 +83,12 @@ function eyeVariation(num) {
       break;
     case 6:
       normalEyes();
-      $("#dnaEyeShapeCode").html("ITS OVER 9000");
+      $("#dnaEyeShapeCode").html("RARE");
       eyesType6();
       break;
     case 7:
       normalEyes();
-      $("#dnaEyeShapeCode").html("RARE");
+      $("#dnaEyeShapeCode").html("ITS OVER 9000");
       eyesType7();
       break;
   }
@@ -101,30 +101,30 @@ function normalEyes() {
   $(".pupil").css("height", "15px");
   $(".pupil").css("top", "24px");
   $(".pupil").removeClass("over9000Class");
-  console.log("normalEyes");
 }
 
 function eyesType2() {
   $(".eyes").css("top", "15px");
-  console.log("eyesType2");
 }
 
 function eyesType3() {
   $(".eyes").css("top", "5px");
-  console.log("eyesType3");
 }
 
 function eyesType4() {
   $(".pupil").css("width", "32px");
-  console.log("eyesType4");
 }
 
 function eyesType5() {
   $(".pupil").css("height", "32px");
-  console.log("eyesType5");
 }
 
 function eyesType6() {
+  $(".pupil").css("width", "4px");
+  $(".pupil").css("height", "4px");
+}
+
+function eyesType7() {
   $(".pupil").css("top", "10px");
   $(".pupil").css("width", "42px");
   $(".pupil").css("height", "42px");
@@ -132,13 +132,6 @@ function eyesType6() {
   $(".pupil").addClass("over9000Class");
 
   console.log("ITS OVER 9000");
-  console.log($(".pupil").css);
-}
-
-function eyesType7() {
-  $(".pupil").css("width", "4px");
-  $(".pupil").css("height", "4px");
-  console.log("eyesType7");
 }
 
 // Mouth shape styling
@@ -172,12 +165,12 @@ function mouthVariation(num) {
       break;
     case 6:
       normalMouth();
-      $("#dnaMouthShapeCode").html("ITS OVER 9000");
+      $("#dnaMouthShapeCode").html("RARE");
       mouthType6();
       break;
     case 7:
       normalMouth();
-      $("#dnaMouthShapeCode").html("RARE");
+      $("#dnaMouthShapeCode").html("ITS OVER 9000");
       mouthType7();
       break;
   }
@@ -214,6 +207,12 @@ function mouthType5() {
 }
 
 function mouthType6() {
+  $("#mouthArea").css("height", "10px");
+  $("#mouthArea").css("width", "40px");
+  $("#mouthArea").css("top", "80px");
+}
+
+function mouthType7() {
   $("#mouthArea").css("height", "64px");
   $("#mouthArea").css("width", "156px");
   $("#mouthArea").css("top", "28px");
@@ -223,12 +222,6 @@ function mouthType6() {
 
   $("#leftArm").addClass("leftArmUpClass");
   $("#rightArm").addClass("rightArmUpClass");
-}
-
-function mouthType7() {
-  $("#mouthArea").css("height", "10px");
-  $("#mouthArea").css("width", "40px");
-  $("#mouthArea").css("top", "80px");
 }
 
 function animationForMonkey(num) {
@@ -260,12 +253,12 @@ function animationForMonkey(num) {
       break;
     case 6:
       withoutAnimation();
-      $("#dnaAnimationCode").html("ITS OVER 9000");
+      $("#dnaAnimationCode").html("RARE");
       animationType6();
       break;
     case 7:
       withoutAnimation();
-      $("#dnaAnimationCode").html("RARE");
+      $("#dnaAnimationCode").html("ITS OVER 9000");
       animationType7();
       break;
   }
@@ -285,8 +278,6 @@ function withoutAnimation() {
   $(".pupil").removeClass("growingAndShrinkingClass");
   $("#leftArm").removeClass("movingLeftArmClass");
   $("#rightArm").removeClass("movingRightArmClass");
-
-  console.log("clearing");
 }
 
 function animationType2() {
@@ -306,11 +297,6 @@ function animationType5() {
 }
 
 function animationType6() {
-  $("#mHead").addClass("growingAndShrinkingClass");
-  $("#mHeadTop").addClass("growingAndShrinkingClass");
-  $("#monkey").addClass("jumpingClass");
-  $(".pupil").addClass("growingAndShrinkingClass");
-
   $("#leftArm").removeClass("leftArmPosition");
   $("#rightArm").removeClass("rightArmPosition");
 
@@ -319,6 +305,11 @@ function animationType6() {
 }
 
 function animationType7() {
+  $("#mHead").addClass("growingAndShrinkingClass");
+  $("#mHeadTop").addClass("growingAndShrinkingClass");
+  $("#monkey").addClass("jumpingClass");
+  $(".pupil").addClass("growingAndShrinkingClass");
+
   $("#leftArm").removeClass("leftArmPosition");
   $("#rightArm").removeClass("rightArmPosition");
 
