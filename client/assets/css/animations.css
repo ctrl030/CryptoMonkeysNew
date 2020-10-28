@@ -1,0 +1,66 @@
+/*
+@keyframes templateForAnimation {
+  0% {
+
+  }
+
+  10% {
+
+  }
+
+  20% {
+
+  }
+
+  30% {
+
+  }
+
+  40% {
+
+  }
+
+  50% {
+
+  }
+
+  60% {
+
+  }
+
+  70% {
+
+  }
+
+  80% {
+
+  }
+
+  90% {
+
+  }
+
+  100% {
+
+  }
+
+}
+*/
+
+.bigHeadClass {
+  animation: bigHead 10s infinite;
+}
+
+@keyframes bigHead {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(2);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}

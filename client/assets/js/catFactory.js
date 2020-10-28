@@ -54,9 +54,7 @@ function dnaLowerHeadColor(color,code) {
 
 
 
-//###################################################
-//Functions below will be used later on in the project
-//###################################################
+// Eye shape styling
 function eyeVariation(num) {
 
     $('#dnaEyeShape').html(num)
@@ -92,10 +90,56 @@ function eyeVariation(num) {
             break
         case 7:
             normalEyes()
-            $('#dnaEyeShapeCode').html('RARE')            
+            $('#dnaEyeShapeCode').html('RARE')
+            eyesType7();            
             break
     }
 }
+
+function normalEyes() {
+    $('.eyes').css('width', '40px')
+    $('.eyes').css('top', '10px')
+    $('.pupil').css('width', '12px')
+    $('.pupil').css('height', '15px')
+    $('.pupil').css('top', '24px')    
+    console.log("normalEyes")
+}
+
+function eyesType2() {    
+    $('.eyes').css('top', '15px')    
+    console.log("eyesType2")
+}
+
+function eyesType3() {    
+    $('.eyes').css('top', '5px')    
+    console.log("eyesType3")
+}
+
+function eyesType4() {
+    $('.pupil').css('width', '32px')
+    console.log("eyesType4")
+}
+
+function eyesType5() {
+    $('.pupil').css('height', '32px')
+    console.log("eyesType5")
+}
+
+function eyesType6() {
+    $('.pupil').css('top', '10px')
+    $('.pupil').css('width', '42px')
+    $('.pupil').css('height', '42px')
+    console.log("eyesType6")
+}
+
+function eyesType7() {
+    $('.pupil').css('width', '4px')
+    $('.pupil').css('height', '4px')
+    console.log("eyesType7")
+}
+
+
+// Mouth shape styling
 
 function mouthVariation(num) {
 
@@ -132,9 +176,12 @@ function mouthVariation(num) {
             break
         case 7:
             normalMouth()
-            $('#dnaMouthShapeCode').html('RARE')            
+            $('#dnaMouthShapeCode').html('RARE') 
+            mouthType7();           
             break
     }
+
+
 }
 
 function normalMouth() {
@@ -181,38 +228,86 @@ function mouthType6() {
     $('#rightArm').css('left', '110px')
 }
 
-function normalEyes() {
-    $('.eyes').css('width', '40px')
-    $('.eyes').css('top', '10px')
-    $('.pupil').css('width', '12px')
-    $('.pupil').css('height', '15px')
-    $('.pupil').css('top', '24px')    
-    console.log("normalEyes")
+function mouthType7() {    
+    $('#mouthArea').css('height', '10px')
+    $('#mouthArea').css('width', '40px')
+    $('#mouthArea').css('top', '80px')
 }
 
-function eyesType2() {    
-    $('.eyes').css('top', '15px')    
-    console.log("eyesType2")
+
+
+function animationForMonkey(num) {
+
+    $('#dnaAnimation').html(num)
+    switch (num) {
+        case 1:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('Basic')
+            break
+        case 2:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('animationType2')
+            animationType2();
+            break           
+        case 3:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('animationType3')
+            animationType3();
+            break
+        case 4:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('animationType4')
+            animationType4();
+            break
+        case 5:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('animationType5')
+            animationType5();
+            break
+        case 6:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('Hyper')
+            animationType6();
+            break
+        case 7:
+            withoutAnimation()
+            $('#dnaAnimationCode').html('RARE') 
+            animationType7();           
+            break
+    }
+
+
 }
 
-function eyesType3() {    
-    $('.eyes').css('top', '5px')    
-    console.log("eyesType3")
+function withoutAnimation() {
+    // Reset Big Head while keeping centered: $('#mHead').css('transform ', 'translateX(-50%)')
+    console.log("animationType1") 
 }
 
-function eyesType4() {
-    $('.pupil').css('width', '32px')
-    console.log("eyesType4")
+function animationType2() {
+    $('#mHead').addClass("bigHeadClass");
+    console.log("animationType2") 
 }
 
-function eyesType5() {
-    $('.pupil').css('height', '32px')
-    console.log("eyesType5")
+function animationType3() {    
+    
 }
 
-function eyesType6() {
-    $('.pupil').css('top', '10px')
-    $('.pupil').css('width', '42px')
-    $('.pupil').css('height', '42px')
-    console.log("eyesType6")
+function animationType4() {    
+    
+}
+
+function animationType5() {
+    
+}
+
+function animationType6() {    
+
+    //Big Head while keeping centered: transform: translateX(-50%) scale(1.5);
+
+    
+}
+
+function animationType7() {    
+   
 }

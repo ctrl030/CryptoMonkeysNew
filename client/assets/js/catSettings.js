@@ -27,7 +27,7 @@ $( document ).ready(function() {
   $('#dnaMouthShape').html(defaultDNA.mouthShape)
   $('#dnaEyeBackgroundColor').html(defaultDNA.eyeBackgroundColor)
   $('#dnaLowerHeadColor').html(defaultDNA.lowerHeadColor)
-  $('#dnaanimation').html(defaultDNA.animation)
+  $('#dnaAnimation').html(defaultDNA.animation)
   $('#dnaspecial').html(defaultDNA.lastNum)
 
   renderMonkey(defaultDNA)
@@ -43,7 +43,7 @@ function getDna(){
     dna += $('#dnaMouthShape').html()
     dna += $('#dnaEyeBackgroundColor').html()
     dna += $('#dnaLowerHeadColor').html()
-    dna += $('#dnaanimation').html()
+    dna += $('#dnaAnimation').html()
     dna += $('#dnaspecial').html()
 
     return dna
@@ -63,10 +63,10 @@ function renderMonkey(dna){
   $('#earsColorSlider').val(dna.earscolor)
    
   eyeVariation(defaultDNA.eyesShape)
-  $('#dnaEyeShapeSlider').val(defaultDNA.eyesShape)  
+  $('#dnaEyeShapeSlider').val(dna.eyesShape)  
 
   mouthVariation(defaultDNA.eyesShape)
-  $('#dnaMouthShapeSlider').val(defaultDNA.mouthShape)  
+  $('#dnaMouthShapeSlider').val(dna.mouthShape)  
     
   dnaEyeBackgroundColor(colors[dna.eyeBackgroundColor],dna.eyeBackgroundColor)
   $('#eyeBackgroundColorSlider').val(dna.eyeBackgroundColor)
@@ -74,6 +74,8 @@ function renderMonkey(dna){
   dnaLowerHeadColor(colors[dna.lowerHeadColor],dna.lowerHeadColor)
   $('#lowerHeadColorSlider').val(dna.lowerHeadColor)
 
+  animationForMonkey(defaultDNA.animation) 
+  $('#dnaAnimationSlider').val(dna.animation)  
 }
 
 // Changing monkey colors
@@ -118,5 +120,11 @@ $('#lowerHeadColorSlider').change(()=>{
   var colorVal = $('#lowerHeadColorSlider').val()
   dnaLowerHeadColor(colors[colorVal],colorVal)
 })
+
+$('#dnaAnimationSlider').change(()=>{
+  var animationVal = parseInt($('#dnaAnimationSlider').val()) 
+  animationForMonkey(animationVal)  
+})
+
 
 

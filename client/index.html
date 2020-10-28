@@ -13,13 +13,16 @@
   <link rel="stylesheet" href="assets/css/colors.css">
   <link rel="stylesheet" href="assets/css/factory.css">
   <link rel="stylesheet" href="assets/css/frontend.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
   <body>
     <div class="container p-5" style="margin-top: 12vh;margin-bottom: 10vh;">
+
         <div align="center">
-        <h1 class="textOverBoxes">Jungle Island</h1>
-        <h3 class="textOverBoxes">Create your Crypto Monkey</h3>
-    </div>
+            <h1 class="textOverBoxes">Jungle Island</h1>
+            <h3 class="textOverBoxes">Create your Crypto Monkey</h3>
+        </div>
+
         <div class="row">
             <div class="col-lg-4 monkeyBox m-2 light-b-shadow">
                 <div id="monkey">    
@@ -100,7 +103,7 @@
                          <span id="dnaMouthShape"></span>
                          <span id="dnaEyeBackgroundColor"></span>
                          <span id="dnaLowerHeadColor"></span>
-                         <span id="dnadanimation"></span>
+                         <span id="dnaAnimation"></span>
                          <span id="dnaspecial"></span>
                     </b>
                 </div>
@@ -141,29 +144,33 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="formControlRange"><b>Eye background</b><span class="badge badge-dark ml-2" id="eyeBackgroundColorCode"></span></label>
+                    <label for="formControlRange"><b>Eye background color</b><span class="badge badge-dark ml-2" id="eyeBackgroundColorCode"></span></label>
                     <input type="range" min="10" max="98" class="form-control-range" id="eyeBackgroundColorSlider">
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="formControlRange"><b>Lower head</b><span class="badge badge-dark ml-2" id="lowerHeadColorCode"></span></label>
+                    <label for="formControlRange"><b>Lower head color</b><span class="badge badge-dark ml-2" id="lowerHeadColorCode"></span></label>
                     <input type="range" min="10" max="98" class="form-control-range" id="lowerHeadColorSlider">
                 </div>
 
+                <div class="form-group">
+                    <label for="formControlRange"><b>Animation</b><span class="badge badge-dark ml-2" id="dnaAnimationCode"></span></label>
+                    <input type="range" min="1" max="7" class="form-control-range" id="dnaAnimationSlider">
+                </div>
+
+
 
 
             </div>
 
-            </div>
-
-            </div>
+            
             <br>
 
         </div>
 
 
 
-    </div>
+    
     <footer align="left">
         <p>Ivan on Tech Academy Bootcamp 2020</p>
     </footer>
