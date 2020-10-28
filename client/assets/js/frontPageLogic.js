@@ -11,3 +11,22 @@ $("#buttonItsOver9000Monkey").click(() => {
 });
 
 $("#mintMonkey").click(() => {});
+
+// Audio
+var monkeyAudio = document.getElementById("myAudio");
+
+function playAudio() {
+  monkeyAudio.play();
+}
+
+function pauseAudio() {
+  monkeyAudio.pause();
+}
+
+$("#playAudioButton").click(() => {
+  playAudio();
+});
+
+$("#pauseAudioButton").click(() => {
+  pauseAudio();
+});

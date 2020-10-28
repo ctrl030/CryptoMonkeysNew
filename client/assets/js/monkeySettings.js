@@ -30,29 +30,32 @@ var itsOver9000DNA = {
 };
 
 function createRandomMonkey() {
-  /*
-  function getRandomNumberBetweenMinAndMax(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-  }*/
-
   var randomHeadcolor = Math.floor(Math.random() * 88) + 10;
+  var randommouthcolor = Math.floor(Math.random() * 88) + 10;
+  var randomeyescolor = Math.floor(Math.random() * 88) + 10;
+  var randomearscolor = Math.floor(Math.random() * 88) + 10;
 
-  console.log(randomHeadcolor);
+  var randomeyesShape = Math.floor(Math.random() * 6) + 1;
+  var randommouthShape = Math.floor(Math.random() * 6) + 1;
+
+  var randomeyeBackgroundColor = Math.floor(Math.random() * 88) + 10;
+  var randomlowerHeadColor = Math.floor(Math.random() * 88) + 10;
+
+  var randomanimation = Math.floor(Math.random() * 6) + 1;
+  var randomlastNum = Math.floor(Math.random() * 6) + 1;
 
   var randomDNA = {
     headcolor: randomHeadcolor,
-    mouthcolor: 14,
-    eyescolor: 13,
-    earscolor: 11,
+    mouthcolor: randommouthcolor,
+    eyescolor: randomeyescolor,
+    earscolor: randomearscolor,
 
-    eyesShape: 7,
-    mouthShape: 7,
-    eyeBackgroundColor: 98,
-    lowerHeadColor: 92,
-    animation: 7,
-    lastNum: 1,
+    eyesShape: randomeyesShape,
+    mouthShape: randommouthShape,
+    eyeBackgroundColor: randomeyeBackgroundColor,
+    lowerHeadColor: randomlowerHeadColor,
+    animation: randomanimation,
+    lastNum: randomlastNum,
   };
 
   // create random DNA variable, create keys and calculate values and assign values to keys

@@ -1,3 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
+  background: #ede15f;
+  line-height: 1 !important;
+}
+
+.textOverBoxes {
+  color: #4f3222 !important;
+  font-weight: bold;
+}
+
 #jungleIslandContainer {
   margin-top: 2vh;
 }
@@ -9,7 +30,25 @@
   border-radius: 10px;
 }
 
+#audioButtonHolderArea {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+}
+
+#audioButtonHolderDiv {
+  width: 1000px;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
 #monkeyRow {
+  color: #4f3222 !important;
   margin-right: 0px !important;
   margin-left: 0px !important;
   justify-content: space-around;

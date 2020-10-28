@@ -17,10 +17,26 @@
   </head>
 
   <body>
+    <audio id="myAudio">
+      <source src="assets/audio/jungleIsland.mp3" type="audio/mpeg" />
+    </audio>
+
     <div class="container" id="jungleIslandContainer">
       <div class="m-2 light-b-shadow" id="jungleIslandTextDiv">
         <h1 class="textOverBoxes">Jungle Island</h1>
         <h3 class="textOverBoxes">Create your Crypto Monkey</h3>
+      </div>
+
+      <div class="m-2 light-b-shadow" id="audioButtonHolderArea">
+        <div class="" id="audioButtonHolderDiv">
+          <button type="button" class="btn btn-success" id="playAudioButton">
+            Monkey Feeling
+          </button>
+
+          <button type="button" class="btn btn-success" id="pauseAudioButton">
+            Silence
+          </button>
+        </div>
       </div>
 
       <div class="row" id="monkeyRow">
@@ -106,7 +122,7 @@
                 <label for="formControlRange"
                   ><b>Upper head and feet</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="firstGroupColorCode"
                   ></span
                 ></label>
@@ -123,7 +139,7 @@
                 <label for="formControlRange"
                   ><b>Body and mouth and around eyes</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="secondGroupColorCode"
                   ></span
                 ></label>
@@ -140,7 +156,7 @@
                 <label for="formControlRange"
                   ><b>Pupils and arms and nostrils</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="thirdGroupColorCode"
                   ></span
                 ></label>
@@ -157,7 +173,7 @@
                 <label for="formControlRange"
                   ><b>Ears</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="fourthGroupColorCode"
                   ></span
                 ></label>
@@ -176,7 +192,7 @@
                 <label for="formControlRange"
                   ><b>Eye type</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="dnaEyeShapeCode"
                   ></span
                 ></label>
@@ -193,7 +209,7 @@
                 <label for="formControlRange"
                   ><b>Mouth type</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="dnaMouthShapeCode"
                   ></span
                 ></label>
@@ -210,7 +226,7 @@
                 <label for="formControlRange"
                   ><b>Eye background color</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="eyeBackgroundColorCode"
                   ></span
                 ></label>
@@ -227,7 +243,7 @@
                 <label for="formControlRange"
                   ><b>Lower head color</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="lowerHeadColorCode"
                   ></span
                 ></label>
@@ -244,7 +260,7 @@
                 <label for="formControlRange"
                   ><b>Animation</b
                   ><span
-                    class="badge badge-dark ml-2"
+                    class="badge badge-success ml-2"
                     id="dnaAnimationCode"
                   ></span
                 ></label>
@@ -265,7 +281,7 @@
         <div class="" id="buttonHolderDiv">
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-success"
             id="buttonCalcDefaultMonkey"
           >
             Default Crypto Monkey
@@ -273,7 +289,7 @@
 
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-success"
             id="buttonCalcRandomMonkey"
           >
             Random Crypto Monkey
@@ -281,13 +297,13 @@
 
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn btn-success"
             id="buttonItsOver9000Monkey"
           >
             ITS OVER 9000
           </button>
 
-          <button type="button" class="btn btn-primary" id="mintMonkey">
+          <button type="button" class="btn btn-success" id="mintMonkey">
             Mint Crypto Monkey
           </button>
         </div>
