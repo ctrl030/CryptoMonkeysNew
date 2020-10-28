@@ -127,54 +127,72 @@
   background: #f7931b !important;
 }
 
-.liftingLeftArmClass {
+.movingLeftArmClass {
   animation: liftingLeftArm 3s infinite;
 }
 
 @keyframes liftingLeftArm {
   0% {
+    right: 16px;
     transform: rotate(-9deg);
     transform-origin: center top;
   }
 
   50% {
+    right: 16px;
     transform: rotate(150deg);
     transform-origin: center top;
   }
 
   100% {
+    right: 16px;
     transform: rotate(-9deg);
     transform-origin: center top;
   }
 }
 
-.liftingRightArmClass {
+.movingRightArmClass {
   animation: liftingRightArm 3s infinite;
 }
 
 @keyframes liftingRightArm {
   0% {
+    left: 16px;
     transform: rotate(9deg);
     transform-origin: center top;
   }
 
   50% {
+    left: 16px;
     transform: rotate(-150deg);
     transform-origin: center top;
   }
 
   100% {
+    left: 16px;
     transform: rotate(9deg);
     transform-origin: center top;
   }
 }
 
 .leftArmUpClass {
-  transform: rotate(150deg) !important;
-  transform-origin: center top !important;
+  right: 16px;
+  transform: rotate(150deg);
+  transform-origin: center top;
 }
 
 .rightArmUpClass {
-  transform: rotate(-150deg) !important;
-  transform-origin: center top !important;
+  left: 16px;
+  transform: rotate(-150deg);
+  transform-origin: center top;
+}
+
+.leftArmPosition {
+  right: 16px;
+  transform: rotate(-9deg);
+}
+
+.rightArmPosition {
+  left: 16px;
+  transform: rotate(9deg);
 }

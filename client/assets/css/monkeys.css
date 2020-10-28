@@ -171,16 +171,6 @@ body {
   z-index: 2;
 }
 
-#leftArm {
-  right: 16px;
-  transform: rotate(-9deg);
-}
-
-#rightArm {
-  left: 16px;
-  transform: rotate(9deg);
-}
-
 #feetArea {
   position: relative;
   top: 272px;

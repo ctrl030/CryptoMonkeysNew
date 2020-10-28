@@ -196,13 +196,8 @@ function normalMouth() {
     $('#mouthArea').css('border-radius', '20% 20% 50% 50%')
     $('#leftArm').removeClass("leftArmUpClass")
     $('#rightArm').removeClass("rightArmUpClass")
-
-
-  /*  $('#armsArea').css('top', '62px')    
-    $('#leftArm').css('transform', 'rotate(-9deg)')
-    $('#leftArm').css('right', '16px')    
-    $('#rightArm').css('transform', 'rotate(9deg)')
-    $('#rightArm').css('left', '16px') */
+    $('#leftArm').addClass("leftArmPosition");
+    $('#rightArm').addClass("rightArmPosition");
 }
 
 function mouthType2() {
@@ -227,17 +222,14 @@ function mouthType5() {
 function mouthType6() {    
     $('#mouthArea').css('height', '64px')
     $('#mouthArea').css('width', '156px')
-    $('#mouthArea').css('top', '28px')   
+    $('#mouthArea').css('top', '28px') 
+    
+    
+    $('#leftArm').removeClass("leftArmPosition");
+    $('#rightArm').removeClass("rightArmPosition"); 
+    
     $('#leftArm').addClass("leftArmUpClass")
     $('#rightArm').addClass("rightArmUpClass")
-
-    /*
-     $('#armsArea').css('top', '-160px')
-    $('#leftArm').css('transform', 'rotate(-20deg)')
-    $('#leftArm').css('right', '110px')
-    $('#rightArm').css('transform', 'rotate(20deg)')
-    $('#rightArm').css('left', '110px')
-    */
 }
 
 function mouthType7() {    
@@ -287,20 +279,23 @@ function animationForMonkey(num) {
             animationType7();           
             break
     }
-
-
 }
 
 function withoutAnimation() {
-    // Reset Big Head while keeping centered: $('#mHead').css('transform ', 'translateX(-50%)')
+
+    if ($('#leftArm').hasClass("leftArmUpClass") == false) {
+        $('#leftArm').addClass("leftArmPosition");
+        $('#rightArm').addClass("rightArmPosition");
+    } 
+
     $('#monkey').removeClass("jumpingClass");
     $('#monkey').removeClass("fadingClass");
     $('#mHead').removeClass("wigglingClass"); 
     $('#mHead').removeClass("growingAndShrinkingClass");
     $('#mHeadTop').removeClass("growingAndShrinkingClass");
     $('.pupil').removeClass("growingAndShrinkingClass");
-    $('#leftArm').removeClass("liftingLeftArmClass");
-    $('#rightArm').removeClass("liftingRightArmClass");
+    $('#leftArm').removeClass("movingLeftArmClass");
+    $('#rightArm').removeClass("movingRightArmClass");
 
     console.log("clearing")    
 }
@@ -326,13 +321,19 @@ function animationType6() {
     $('#mHeadTop').addClass("growingAndShrinkingClass");
     $('#monkey').addClass("jumpingClass");
     $('.pupil').addClass("growingAndShrinkingClass");
-    $('#leftArm').addClass("liftingLeftArmClass");
-    $('#rightArm').addClass("liftingRightArmClass");    
-    
+
+    $('#leftArm').removeClass("leftArmPosition");
+    $('#rightArm').removeClass("rightArmPosition");
+
+    $('#leftArm').addClass("movingLeftArmClass");
+    $('#rightArm').addClass("movingRightArmClass"); 
 }
 
-function animationType7() {   
-    $('#leftArm').addClass("liftingLeftArmClass");
-    $('#rightArm').addClass("liftingRightArmClass");    
-   
+function animationType7() {  
+    $('#leftArm').removeClass("leftArmPosition");
+    $('#rightArm').removeClass("rightArmPosition");
+
+    $('#leftArm').addClass("movingLeftArmClass");
+    $('#rightArm').addClass("movingRightArmClass");
 }
+
