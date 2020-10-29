@@ -88,7 +88,7 @@ function eyeVariation(num) {
       break;
     case 7:
       normalEyes();
-      $("#dnaEyeShapeCode").html("ITS OVER 9000");
+      $("#dnaEyeShapeCode").html("IT'S OVER 9000");
       eyesType7();
       break;
   }
@@ -130,8 +130,6 @@ function eyesType7() {
   $(".pupil").css("height", "42px");
 
   $(".pupil").addClass("over9000Class");
-
-  console.log("ITS OVER 9000");
 }
 
 // Mouth shape styling
@@ -170,7 +168,7 @@ function mouthVariation(num) {
       break;
     case 7:
       normalMouth();
-      $("#dnaMouthShapeCode").html("ITS OVER 9000");
+      $("#dnaMouthShapeCode").html("IT'S OVER 9000");
       mouthType7();
       break;
   }
@@ -260,7 +258,7 @@ function animationForMonkey(num) {
       break;
     case 7:
       withoutAnimation();
-      $("#dnaAnimationCode").html("ITS OVER 9000");
+      $("#dnaAnimationCode").html("IT'S OVER 9000");
       animationType7();
       break;
   }

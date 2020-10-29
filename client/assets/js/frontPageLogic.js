@@ -21,13 +21,11 @@ $("#pauseAudioButton").click(() => {
 $("#showColorSlidersButton").click(() => {
   $(".colorSliders").show();
   $(".attributesSliders").hide();
-  console.log("showColorSlidersButton clicked");
 });
 
 $("#showAttributesSlidersButton").click(() => {
   $(".colorSliders").hide();
   $(".attributesSliders").show();
-  console.log("showAttributesSlidersButton clicked");
 });
 
 // Buttons to generate and mint monkeys
@@ -42,6 +40,7 @@ $("#buttonCalcRandomMonkey").click(() => {
 
 $("#buttonItsOver9000Monkey").click(() => {
   renderMonkey(itsOver9000DNA);
+  console.log("IT'S OVER 9000");
 });
 
 $("#mintMonkey").click(() => {});

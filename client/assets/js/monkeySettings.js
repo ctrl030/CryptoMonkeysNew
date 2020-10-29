@@ -30,19 +30,19 @@ var itsOver9000DNA = {
 };
 
 function createRandomMonkey() {
-  var randomHeadcolor = Math.floor(Math.random() * 88) + 10;
-  var randommouthcolor = Math.floor(Math.random() * 88) + 10;
-  var randomeyescolor = Math.floor(Math.random() * 88) + 10;
-  var randomearscolor = Math.floor(Math.random() * 88) + 10;
+  var randomHeadcolor = Math.floor(Math.random() * 89) + 10;
+  var randommouthcolor = Math.floor(Math.random() * 89) + 10;
+  var randomeyescolor = Math.floor(Math.random() * 89) + 10;
+  var randomearscolor = Math.floor(Math.random() * 89) + 10;
 
-  var randomeyesShape = Math.floor(Math.random() * 6) + 1;
-  var randommouthShape = Math.floor(Math.random() * 6) + 1;
+  var randomeyesShape = Math.floor(Math.random() * 7) + 1;
+  var randommouthShape = Math.floor(Math.random() * 7) + 1;
 
-  var randomeyeBackgroundColor = Math.floor(Math.random() * 88) + 10;
-  var randomlowerHeadColor = Math.floor(Math.random() * 88) + 10;
+  var randomeyeBackgroundColor = Math.floor(Math.random() * 89) + 10;
+  var randomlowerHeadColor = Math.floor(Math.random() * 89) + 10;
 
-  var randomanimation = Math.floor(Math.random() * 6) + 1;
-  var randomlastNum = Math.floor(Math.random() * 6) + 1;
+  var randomanimation = Math.floor(Math.random() * 7) + 1;
+  var randomlastNum = Math.floor(Math.random() * 7) + 1;
 
   var randomDNA = {
     headcolor: randomHeadcolor,
