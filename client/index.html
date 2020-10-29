@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <audio id="myAudio">
+    <audio id="monkeyAudio">
       <source src="assets/audio/jungleIsland.mp3" type="audio/mpeg" />
     </audio>
 
@@ -28,7 +28,7 @@
       </div>
 
       <div class="m-2 light-b-shadow" id="audioButtonHolderArea">
-        <div class="" id="audioButtonHolderDiv">
+        <div id="audioButtonHolderDiv">
           <button type="button" class="btn btn-success" id="playAudioButton">
             Monkey Feeling
           </button>
@@ -117,6 +117,25 @@
         <div class="col-lg-7 monkeyAttributes m-2 light-b-shadow">
           <!-- Monkey Sliders -->
           <div id="monkeySliders">
+            <!-- Buttons for switching between Sliders -->
+
+            <div id="sliderButtonHolderDiv">
+              <button
+                type="button"
+                class="btn btn-success"
+                id="showColorSlidersButton"
+              >
+                Main Colors
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                id="showAttributesSlidersButton"
+              >
+                Attributes
+              </button>
+            </div>
+
             <div class="colorSliders">
               <div class="form-group">
                 <label for="formControlRange"

@@ -54,6 +54,26 @@ body {
   justify-content: space-around;
 }
 
+.monkeyAttributes {
+  padding: 25px;
+  background-color: #ededed;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+#sliderButtonHolderDiv {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.attributesSliders {
+  display: none;
+}
+
 .monkeyBox {
   position: relative;
   height: 580px;
@@ -61,13 +81,7 @@ body {
   /*background-color: #93fc7c;*/
   background-image: url("https://cdn.pixabay.com/photo/2016/11/28/18/37/the-1865639_960_720.jpg");
   border-radius: 10px;
-}
-
-.monkeyAttributes {
-  padding: 25px;
-  background-color: #ededed;
-  border-radius: 10px;
-  z-index: -5;
+  z-index: 1;
 }
 
 .dnaDiv {

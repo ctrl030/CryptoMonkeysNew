@@ -177,9 +177,9 @@ function mouthVariation(num) {
 }
 
 function normalMouth() {
-  $("#mouthArea").css("height", "50px");
-  $("#mouthArea").css("width", "130px");
-  $("#mouthArea").css("top", "36px");
+  $("#mouthArea").css("height", "40px");
+  $("#mouthArea").css("width", "144px");
+  $("#mouthArea").css("top", "42px");
   $("#mouthArea").css("border-radius", "20% 20% 50% 50%");
   $("#leftArm").removeClass("leftArmUpClass");
   $("#rightArm").removeClass("rightArmUpClass");
@@ -198,10 +198,12 @@ function mouthType3() {
 }
 
 function mouthType4() {
+  $("#mouthArea").css("top", "36px");
   $("#mouthArea").css("width", "90px");
 }
 
 function mouthType5() {
+  $("#mouthArea").css("top", "36px");
   $("#mouthArea").css("height", "44px");
   $("#mouthArea").css("border-radius", "10% 10% 10% 10%");
 }
@@ -213,9 +215,9 @@ function mouthType6() {
 }
 
 function mouthType7() {
-  $("#mouthArea").css("height", "64px");
+  $("#mouthArea").css("height", "65px");
   $("#mouthArea").css("width", "156px");
-  $("#mouthArea").css("top", "28px");
+  $("#mouthArea").css("top", "32px");
 
   $("#leftArm").removeClass("leftArmPosition");
   $("#rightArm").removeClass("rightArmPosition");

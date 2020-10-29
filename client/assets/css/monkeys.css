@@ -132,10 +132,10 @@
 }
 
 #mouthArea {
-  height: 50px;
-  width: 130px;
   position: absolute;
-  top: 36px;
+  height: 40px;
+  width: 144px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20% 20% 50% 50%;
@@ -154,7 +154,7 @@
   height: 260px;
   width: 60px;
   border-radius: 20% 20% 20% 20%;
-  z-index: 2;
+  z-index: 3;
 }
 
 #feetArea {
