@@ -274,7 +274,7 @@ function withoutAnimation() {
   $("#monkey").removeClass("fadingClass");
   $("#mHead").removeClass("wigglingClass");
   $("#mHead").removeClass("growingAndShrinkingClass");
-  $("#mHeadTop").removeClass("growingAndShrinkingClass");
+
   $(".pupil").removeClass("growingAndShrinkingClass");
   $("#leftArm").removeClass("movingLeftArmClass");
   $("#rightArm").removeClass("movingRightArmClass");
@@ -306,13 +306,13 @@ function animationType6() {
 
 function animationType7() {
   $("#mHead").addClass("growingAndShrinkingClass");
-  $("#mHeadTop").addClass("growingAndShrinkingClass");
+
   $("#monkey").addClass("jumpingClass");
   $(".pupil").addClass("growingAndShrinkingClass");
 
   $("#leftArm").removeClass("leftArmPosition");
   $("#rightArm").removeClass("rightArmPosition");
 
-  $("#leftArm").addClass("movingLeftArmClass");
-  $("#rightArm").addClass("movingRightArmClass");
+  $("#leftArm").addClass("leftArmUpClass");
+  $("#rightArm").addClass("rightArmUpClass");
 }
