@@ -148,12 +148,12 @@ function mouthVariation(num) {
       break;
     case 3:
       normalMouth();
-      $("#dnaMouthShapeCode").html("Lambo");
+      $("#dnaMouthShapeCode").html("Bullish");
       mouthType3();
       break;
     case 4:
       normalMouth();
-      $("#dnaMouthShapeCode").html("Bullish");
+      $("#dnaMouthShapeCode").html("Whuat?");
       mouthType4();
       break;
     case 5:
@@ -179,10 +179,6 @@ function normalMouth() {
   $("#mouthArea").css("width", "144px");
   $("#mouthArea").css("top", "42px");
   $("#mouthArea").css("border-radius", "20% 20% 50% 50%");
-  $("#leftArm").removeClass("leftArmUpClass");
-  $("#rightArm").removeClass("rightArmUpClass");
-  $("#leftArm").addClass("leftArmPosition");
-  $("#rightArm").addClass("rightArmPosition");
 }
 
 function mouthType2() {
@@ -191,13 +187,16 @@ function mouthType2() {
 }
 
 function mouthType3() {
-  $("#mouthArea").css("height", "65px");
-  $("#mouthArea").css("top", "32px");
+  $("#mouthArea").css("top", "36px");
+  $("#mouthArea").css("width", "90px");
 }
 
 function mouthType4() {
-  $("#mouthArea").css("top", "36px");
+  $("#mouthArea").css("height", "40px");
   $("#mouthArea").css("width", "90px");
+  $("#mouthArea").css("top", "36px");
+
+  $("#mouthArea").css("border-radius", "50% 50% 50% 50%");
 }
 
 function mouthType5() {
@@ -214,14 +213,7 @@ function mouthType6() {
 
 function mouthType7() {
   $("#mouthArea").css("height", "65px");
-  $("#mouthArea").css("width", "156px");
   $("#mouthArea").css("top", "32px");
-
-  $("#leftArm").removeClass("leftArmPosition");
-  $("#rightArm").removeClass("rightArmPosition");
-
-  $("#leftArm").addClass("leftArmUpClass");
-  $("#rightArm").addClass("rightArmUpClass");
 }
 
 function animationForMonkey(num) {
@@ -265,10 +257,13 @@ function animationForMonkey(num) {
 }
 
 function withoutAnimation() {
-  if ($("#leftArm").hasClass("leftArmUpClass") == false) {
-    $("#leftArm").addClass("leftArmPosition");
-    $("#rightArm").addClass("rightArmPosition");
-  }
+  $("#leftArm").removeClass("movingLeftArmClass");
+  $("#rightArm").removeClass("movingRightArmClass");
+  $("#leftArm").removeClass("leftArmUpClass");
+  $("#rightArm").removeClass("rightArmUpClass");
+
+  $("#leftArm").addClass("leftArmPosition");
+  $("#rightArm").addClass("rightArmPosition");
 
   $("#monkey").removeClass("jumpingClass");
   $("#monkey").removeClass("fadingClass");
@@ -276,8 +271,6 @@ function withoutAnimation() {
   $("#mHead").removeClass("growingAndShrinkingClass");
 
   $(".pupil").removeClass("growingAndShrinkingClass");
-  $("#leftArm").removeClass("movingLeftArmClass");
-  $("#rightArm").removeClass("movingRightArmClass");
 }
 
 function animationType2() {

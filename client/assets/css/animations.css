@@ -140,7 +140,7 @@
 
   50% {
     right: 16px;
-    transform: rotate(150deg);
+    transform: rotate(30deg);
     transform-origin: center top;
   }
 
@@ -164,7 +164,7 @@
 
   50% {
     left: 16px;
-    transform: rotate(-150deg);
+    transform: rotate(-30deg);
     transform-origin: center top;
   }
 
